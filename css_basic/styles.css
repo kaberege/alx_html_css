@@ -2,7 +2,9 @@ body,
 main {
     display: flex;
 }
-
+header{
+    background-color: blueviolet;
+}
 body {
     flex-direction: column;
 }
@@ -10,14 +12,19 @@ body {
 main {
     flex-direction: row;
     flex: auto;
+    background-color: aqua;
 }
 
 article {
     flex: 2;
     overflow-y: auto;
+    background-color: aquamarine;
 }
 
 aside {
     flex: 1;
     overflow-y: auto;
+}
+footer{
+    background-color: rgb(150, 221, 17);
 }
