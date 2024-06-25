@@ -119,32 +119,20 @@ nav>ul>li {
     cursor: pointer;
 }
 
-.flex-image {
-    width: 60%;
-    margin: 0 auto 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 .flex-div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 23%;
+
     color: rgb(240, 255, 255);
 }
 
 .flex-div>img {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 0 auto;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .flex-div>h3 {
     font-size: 19px;
+    text-align: center;
 }
 
 .flex-div>p {
@@ -153,27 +141,113 @@ nav>ul>li {
     text-align: center;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .flex-image {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flex-div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        color: rgb(240, 255, 255);
+        margin: 0 auto 0 auto;
+    }
+
+    .flex-div>img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 0 auto;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .flex-image {
+        width: 70%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .flex-div {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+    }
+
+    .flex-div>img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 0 auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .flex-image {
+        width: 70%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .flex-div {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .flex-image {
+        width: 60%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .flex-div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 23%;
+    }
+
+    .flex-div>img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 0 auto;
+        border-radius: 50%;
+    }
+}
+
+
 /* styling second section of the project with quotes */
 
 .sec2 {
-    display: flex;
-    flex-direction: row;
-    padding: 60px 10% 60px 10%;
     background-color: rgb(205, 43, 226);
     color: rgb(240, 255, 255);
-    align-items: center;
-    gap: 25px;
 }
 
-.quoted-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .quoted-img>img {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -191,28 +265,89 @@ nav>ul>li {
     font-size: 15px;
 }
 
-/* styling third section of grid video */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 10% 60px 10%;
+        gap: 25px;
+    }
 
-.sec3 {
-    width: 80%;
-    margin: 0 auto 0 auto;
-    padding: 80px 0 70px 0;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 20px;
+    .quoted-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quoted-img>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .my-quote {
+        text-align: center;
+    }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 20% 60px 20%;
+        gap: 25px;
+    }
+
+    .quoted-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quoted-img>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .my-quote {
+        text-align: center;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sec2 {
+        display: flex;
+        flex-direction: row;
+        padding: 60px 10% 60px 10%;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .quoted-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quoted-img>img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .my-quote {
+        text-align: left;
+    }
+
+}
+
+/* styling third section of grid video */
+
 .sec3>h2 {
-    grid-column: 1/span 5;
     font-size: 30px;
     padding-bottom: 40px;
     text-align: center;
-}
-
-.sec3-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .sc3-img {
@@ -307,25 +442,110 @@ nav>ul>li {
     color: rgba(205, 43, 226, 0.4);
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sec3 {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding: 80px 0 70px 0;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+
+    .sec3-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sc3-img {
+        width: 100%;
+        height: 200px;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sec3 {
+        width: 70%;
+        margin: 0 auto 0 auto;
+        padding: 80px 0 70px 0;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+
+    .sec3-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sec3 {
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .sec3>h2 {
+        grid-column: 1/span 2;
+    }
+
+    .sec3-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sec3 {
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 20px;
+    }
+
+    .sec3>h2 {
+        grid-column: 1/span 5;
+    }
+
+    .sec3-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .sec3 {
+        width: 80%;
+    }
+}
+
 /* styling fouth section of free mebership */
 
 .sec4 {
-    margin: 0 auto 0 auto;
-    padding: 50px 10% 50px 10%;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
     background-color: rgb(2, 0, 31);
     gap: 25px;
 }
 
 .smile-header {
-    grid-area: 1/1/1/7;
     text-align: center;
-    padding-bottom: 40px;
 }
 
 .smile-btn {
-    grid-area: 3/1/3/7;
     width: 160px;
     margin: 0 auto 0 auto;
     font-size: 11px;
@@ -333,7 +553,6 @@ nav>ul>li {
     padding: 9px;
     outline: none;
     border: none;
-    margin-top: 30px;
     background-color: rgba(205, 43, 226);
     color: rgba(240, 255, 255);
     transition: all 1s ease;
@@ -373,20 +592,83 @@ nav>ul>li {
     text-align: center;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sec4 {
+        width: 80%;
+        margin: 0 auto 0 auto;
+        padding: 50px 10% 50px 10%;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sec4 {
+        width: 87%;
+        margin: 0 auto 0 auto;
+        padding: 50px 10% 50px 10%;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 40px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sec4 {
+        padding: 50px 10% 50px 10%;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .smile-header {
+        grid-area: 1/1/1/3;
+    }
+
+    .smile-btn {
+        grid-area: 5/1/5/3;
+
+    }
+
+    .smile-header {
+        padding-bottom: 40px;
+    }
+
+    .smile-btn {
+
+        margin-top: 30px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sec4 {
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+
+    .smile-header {
+        grid-area: 1/1/1/7;
+    }
+
+    .smile-btn {
+        grid-area: 3/1/3/7;
+    }
+}
+
+
 /* styling fith section of FAQ */
 
 .sec5 {
-    width: 75%;
     display: flex;
     flex-direction: column;
     gap: 25px;
     padding: 40px 0 40px 0;
     margin: 0 auto 0 auto;
-}
-
-.sec5>h2 {
-    text-align: center;
-    font-size: 30px;
 }
 
 .sec-header {
@@ -395,19 +677,9 @@ nav>ul>li {
     gap: 40px;
 }
 
-.freq1,
-.freq2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.sub-freq1,
-.sub-freq2 {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.sec5>h2 {
+    text-align: center;
+    font-size: 30px;
 }
 
 .sub-freq1>div>h3,
@@ -419,6 +691,81 @@ nav>ul>li {
     font-size: 15px;
     color: rgb(1, 1, 31);
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .sec5 {
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+
+    .freq1,
+    .freq2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sub-freq1,
+    .sub-freq2 {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sec5 {
+        width: 70%;
+        margin: 0 auto 0 auto;
+    }
+
+    .freq1,
+    .freq2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sub-freq1,
+    .sub-freq2 {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .sec5 {
+        width: 80%;
+    }
+
+    .freq1,
+    .freq2 {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .sub-freq1,
+    .sub-freq2 {
+        gap: 20px;
+        display: flex;
+        flex-direction: c;
+        width: 40%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .sec5 {
+        width: 70%;
+    }
+}
+
 
 /* styling footer */
 
@@ -469,4 +816,15 @@ footer {
 .footer-sec>p {
     color: rgb(200, 200, 200);
     text-align: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .footer-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
 }
