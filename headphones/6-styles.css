@@ -289,16 +289,6 @@ nav>ul>li>a:active {
 
 /* ==================== styling main section ==================*/
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 480px) {}
-
-/* Medium devices (landscape tablets, 480px and up) */
-@media only screen and (min-width: 480px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
 .what-section {
     display: flex;
     flex-direction: column;
@@ -466,7 +456,7 @@ nav>ul>li>a:active {
 }
 
 .pent-content>p {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .our-head>p,
@@ -488,19 +478,38 @@ nav>ul>li>a:active {
 
 .pent-container {
     position: relative;
-    width: 150px;
-    height: 130px;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto 0 auto;
 }
 
-.pent-container>img {
-    width: 100%;
-    height: 100%;
+.pents {
+    display: flex;
+    flex-direction: column;
+}
+
+.pentagone1 {
+    width: 150px;
+    height: 0;
+    border-bottom: 80px solid rgba(255, 101, 101, 1);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+}
+
+.pentagone2 {
+    width: 150px;
+    height: 0;
+    border-top: 80px solid rgba(255, 101, 101, 1);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
 }
 
 .pent-content {
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: 0;
     left: 0;
     display: flex;
@@ -560,4 +569,150 @@ nav>ul>li>a:active {
         justify-content: space-between;
     }
 
+}
+
+/* ==================== styling contact section ==================*/
+
+.contact-section {
+    background-color: rgb(255, 255, 255);
+    padding: 80px 0 80px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+
+form>h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.myInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.myInput>label {
+    width: 95px;
+    font-size: 15px;
+}
+
+.myInput>input {
+    outline: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    width: 100%;
+    max-width: 200px;
+}
+
+.myInput>label,
+.myInput>input {
+    border-bottom: 2px solid rgba(190, 190, 190, 1);
+}
+
+#form-btn {
+    color: rgb(240, 255, 255);
+    background-color: rgba(255, 101, 101, 1);
+    font-size: 12px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 130px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+    margin: 0 auto 0 auto;
+}
+
+#form-btn:hover,
+#form-btn:active {
+    opacity: 0.9;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 480px) {}
+
+/* Medium devices (landscape tablets, 480px and up) */
+@media only screen and (min-width: 480px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* styling footer */
+
+footer {
+    background-color: rgb(2, 0, 31);
+    padding: 60px 0 40px 0;
+}
+
+.footer-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-div>img {
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.footer-icon>a {
+    color: rgb(240, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.6s ease;
+}
+
+.footer-icon>a:hover,
+.footer-icon>a:active {
+    color: rgba(255, 101, 101, 1);
+}
+
+.footer-sec>p {
+    color: rgba(130, 130, 130, 1);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 480px) {
+    .footer-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
 }

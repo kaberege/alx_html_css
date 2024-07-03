@@ -1,4 +1,20 @@
 @font-face {
+    font-family: myFont;
+    src: url(source-sans-pro/SourceSansPro-Black.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont, Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 160%;
+}
+
+@font-face {
     font-family: 'holberton_school-icon';
     src: url('fonts/holberton_school-icon.eot?sq4eq4');
     src: url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
@@ -110,23 +126,6 @@
     content: "\e914";
 }
 
-
-
-@font-face {
-    font-family: myFont;
-    src: url(source-sans-pro/SourceSansPro-Black.otf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: myFont, Arial, Helvetica, sans-serif;
-}
-
-body {
-    line-height: 160%;
-}
 
 /* ==================== styling header section ==================*/
 
@@ -340,28 +339,33 @@ nav>ul>li>a:active {
 .what-div2-content>p {
     font-size: 14px;
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 480px) {
-    .what-section{
+    .what-section {
         width: 80%;
         margin: 0 auto 0 auto;
     }
-    .what-div1{
+
+    .what-div1 {
         width: 99%;
         margin: 0 auto 0 auto;
         text-align: center;
     }
-    .what-div2{
+
+    .what-div2 {
         width: 80%;
         display: flex;
-       flex-direction: column;
-       gap: 60px;
+        flex-direction: column;
+        gap: 60px;
         margin: 0 auto 0 auto;
     }
-    .what-div2-content{
+
+    .what-div2-content {
         text-align: center;
     }
-    .what-div2-content>p{
+
+    .what-div2-content>p {
         width: 100%;
         max-width: 200px;
         margin: 0 auto 0 auto;
@@ -371,16 +375,18 @@ nav>ul>li>a:active {
 
 /* Medium devices (landscape tablets, 480px and up) */
 @media only screen and (min-width: 480px) {
-    .what-section{
+    .what-section {
         width: 80%;
         margin: 0 auto 0 auto;
     }
-    .what-div1{
+
+    .what-div1 {
         width: 99%;
         margin: 0 auto 0 auto;
         text-align: center;
     }
-    .what-div2{
+
+    .what-div2 {
         width: 80%;
         display: flex;
         flex-direction: row;
@@ -388,11 +394,13 @@ nav>ul>li>a:active {
         justify-content: space-between;
         margin: 0 auto 0 auto;
     }
-    .what-div2-content{
+
+    .what-div2-content {
         text-align: center;
         width: 49%;
     }
-    .what-div2-content>p{
+
+    .what-div2-content>p {
         width: 100%;
         max-width: 200px;
         margin: 0 auto 0 auto;
@@ -402,24 +410,27 @@ nav>ul>li>a:active {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .what-section{
+    .what-section {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto 0 auto;
     }
-    .what-div1{
+
+    .what-div1 {
         width: 100%;
         max-width: 700px;
         margin: 0 auto 0 auto;
     }
-    .what-div2{
+
+    .what-div2 {
         width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
-    .what-div2-content{
+
+    .what-div2-content {
         width: auto;
     }
 }

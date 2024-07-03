@@ -1,3 +1,20 @@
+
+@font-face {
+    font-family: myFont;
+    src: url(source-sans-pro/SourceSansPro-Black.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont, Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 160%;
+}
+
 @font-face {
     font-family: 'holberton_school-icon';
     src: url('fonts/holberton_school-icon.eot?sq4eq4');
@@ -110,23 +127,6 @@
     content: "\e914";
 }
 
-
-
-@font-face {
-    font-family: myFont;
-    src: url(source-sans-pro/SourceSansPro-Black.otf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: myFont, Arial, Helvetica, sans-serif;
-}
-
-body {
-    line-height: 160%;
-}
 
 /* ==================== styling header section ==================*/
 
