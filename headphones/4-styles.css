@@ -14,7 +14,6 @@ body {
     line-height: 160%;
 }
 
-
 @font-face {
     font-family: 'holberton_school-icon';
     src: url('fonts/holberton_school-icon.eot?sq4eq4');
@@ -130,6 +129,7 @@ body {
 
 /* ==================== styling header section ==================*/
 
+
 header {
     background-image: url("headphones_hero_1.jpg");
     background-repeat: no-repeat;
@@ -139,22 +139,18 @@ header {
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-nav>ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
 
-nav>ul>li {
+nav>ul>li,
+.check-nav>li {
     list-style-type: none;
 }
 
-nav>ul>li>a {
+nav>ul>li>a,
+.check-nav>li>a {
     text-decoration: none;
     color: rgb(240, 255, 255);
     font-size: 15px;
@@ -162,7 +158,9 @@ nav>ul>li>a {
 }
 
 nav>ul>li>a:hover,
-nav>ul>li>a:active {
+.check-nav>li>a:hover,
+nav>ul>li>a:active,
+.check-nav>li>a:active {
     color: rgba(255, 101, 101, 1);
 }
 
@@ -207,9 +205,65 @@ nav>ul>li>a:active {
     opacity: 0.9;
 }
 
+.sideBar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 10%;
+}
 
+.check-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    animation: myNav 1s ease;
+}
 
-/* Extra small devices (phones, 600px and down) */
+@keyframes myNav {
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+
+#checkbar,
+.sideBar,
+.barIcon,
+.closeIcon {
+    display: none;
+}
+
+.barIcon,
+.closeIcon {
+    cursor: pointer;
+    color: rgb(240, 255, 255);
+    width: 33px;
+    height: 33px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.8s ease;
+}
+
+.barIcon:hover,
+.closeIcon:hover {
+    background-color: rgba(90, 90, 90, 1);
+}
+
+.barIcon {
+    font-size: 30px;
+}
+
+.closeIcon {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
     header {
         display: flex;
@@ -221,6 +275,35 @@ nav>ul>li>a:active {
     nav>img {
         width: 150px;
         height: 30px;
+        margin: 0 auto 0 auto;
+    }
+
+    nav>ul,
+    .check-nav {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .sideBar {
+        display: block;
+    }
+
+    .barIcon {
+        display: flex;
+    }
+
+    #checkbar:checked+.barIcon {
+        display: none;
+    }
+
+    #checkbar:checked~.check-nav {
+        display: flex;
+    }
+
+    #checkbar:checked~.closeIcon {
+        display: flex;
     }
 
     nav>ul {
@@ -249,9 +332,44 @@ nav>ul>li>a:active {
         padding: 15px 0 80px 0;
     }
 
+    nav {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
     nav>img {
         width: 170px;
         height: 40px;
+        margin: 0 auto 0 auto;
+    }
+
+    nav>ul,
+    .check-nav {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .sideBar {
+        display: block;
+    }
+
+    .barIcon {
+        display: flex;
+    }
+
+    #checkbar:checked+.barIcon {
+        display: none;
+    }
+
+    #checkbar:checked~.check-nav {
+        display: flex;
+    }
+
+    #checkbar:checked~.closeIcon {
+        display: flex;
     }
 
     nav,
@@ -269,14 +387,35 @@ nav>ul>li>a:active {
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #checkbar,
+    .sideBar,
+    .barIcon,
+    .closeIcon {
+        display: none;
+    }
 
     nav,
     .sec1 {
-        width: 100%;
+        width: 90%;
         max-width: 1000px;
         margin: 0 auto 0 auto;
+    }
+
+    nav>img {
+        margin: 0;
+    }
+
+    nav>ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 
     .sec1-div1,
@@ -290,15 +429,6 @@ nav>ul>li>a:active {
 
 /* ==================== styling main section ==================*/
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 480px) {}
-
-/* Medium devices (landscape tablets, 480px and up) */
-@media only screen and (min-width: 480px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
 
 .what-section {
     display: flex;
@@ -341,7 +471,7 @@ nav>ul>li>a:active {
     font-size: 14px;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
     .what-section {
         width: 80%;
@@ -409,8 +539,8 @@ nav>ul>li>a:active {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
     .what-section {
         width: 100%;
         max-width: 1000px;
@@ -490,13 +620,13 @@ nav>ul>li>a:active {
 .pent-container {
     position: relative;
     width: 150px;
-    height: 130px;
+    height: 150px;
     margin: 0 auto 0 auto;
 }
 
 .pent-container>img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
 }
 
 .pent-content {
@@ -510,7 +640,7 @@ nav>ul>li>a:active {
     text-align: center;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
 
     .our-head,
@@ -542,23 +672,23 @@ nav>ul>li>a:active {
         grid-template-columns: auto auto;
         justify-content: space-between;
         gap: 50px;
-        width: 100%;
+        width: 90%;
         max-width: 400px;
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
     .our-head {
         width: 600px;
     }
 
     .our-pentagone {
-        width: 80%;
         max-width: 1000px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 10px;
     }
 
 }
@@ -574,7 +704,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 1000px;
+    max-width: 400px;
     margin: 0 auto 0 auto;
 }
 
@@ -632,16 +762,6 @@ form>h2 {
 #form-btn:active {
     opacity: 0.9;
 }
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 480px) {}
-
-/* Medium devices (landscape tablets, 480px and up) */
-@media only screen and (min-width: 480px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
 
 /* styling footer */
 
